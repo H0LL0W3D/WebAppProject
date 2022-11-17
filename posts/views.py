@@ -94,6 +94,7 @@ class PostCreateView(LoginRequiredMixin, CreateView):
     fields = (
         "title",
         "body",
+        "image",
     )
 
     def form_valid(self, form):
