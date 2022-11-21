@@ -12,7 +12,14 @@ class Post(models.Model):
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
     )
-    image = models.ImageField(blank="true")
+    image = models.ImageField(
+        blank="true",
+        upload_to="screenshots",
+        default="https://poster.keepcalmandposters.com/default/5773497_keep_calm_there_is_nothing_here.png",
+    )
+
+    # class Meta:
+    #     ordering = ["date"].reverse
 
     def __str__(self):
         return self.title
@@ -33,4 +40,4 @@ class Comment(models.Model):
         return self.comment
 
     def get_absolute_url(self):
-        return reverse("post_list")
+        return reverse("post_list", kwargs={"pk": self.pk})
