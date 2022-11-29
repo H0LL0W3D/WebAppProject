@@ -45,6 +45,7 @@ class CommentPost(SingleObjectMixin, FormView):
         return super().post(reqeust, *args, **kwargs)
 
     def form_valid(self, form):
+        form.instance.author = self.request.user
         comment = form.save(commit=False)
         comment.post = self.object
         comment.save()
@@ -81,7 +82,7 @@ class PostUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
 class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
     model = Post
     template_name = "post_delete.html"
-    success_url = reverse_lazy("post_lsit")
+    success_url = reverse_lazy("post_list")
 
     def test_func(self):
         obj = self.get_object()
