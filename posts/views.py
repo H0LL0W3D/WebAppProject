@@ -8,6 +8,7 @@ from django.shortcuts import render
 
 from .models import Post
 from .forms import CommentForm
+from django.db.models import Q
 
 
 class PostListView(LoginRequiredMixin, ListView):
