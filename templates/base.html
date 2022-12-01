@@ -14,7 +14,7 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
-<body style="background-color:aqua;">
+<body style="background-color:rgb(65, 213, 213);">
     <div class="container">
         <header class="p-3 mb-3 border-bottom">
             <div class="container">
@@ -22,11 +22,13 @@
 
                 <div class="d-flex flex-wrap align-items-center justify-content-center
             justify-content-lg-start">
-                    <a class="navbar-brand" href="#">
-                        <img src="https://img.freepik.com/free-vector/cute-cute-sugar-glider-cartoon-character_1308-106127.jpg?w=2000"
-                            alt="" width="60" height="60">
+                    <a class="navbar-brand" href="{% url 'home' %}">
+
+                        <!-- Logo Image-->
+                        <img src="../media/static_images/Cuteness.png" alt="Cute image of Sugar Glider" width="60"
+                            height="60">
                     </a>
-                    <a class="navbar-brand" href="{% url 'home' %}">Code Message Board</a>
+                    <a class="navbar-brand" href="{% url 'post_list' %}">Code Message Board</a>
                     <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center
               mb-md-0">
                         {% if user.is_authenticated %}

@@ -6,6 +6,8 @@
     <h2>{{ object.title }}</h2>
     <p>by {{ object.author }} | {{ object.date }}</p>
     <p>{{ object.body }}</p>
+
+    <!-- Shows image if one exists-->
     <img class="img-fluid" src="{{ object.image.url }}" width="250" height="250">
 </div>
 
