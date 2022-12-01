@@ -16,6 +16,17 @@ class PostListView(LoginRequiredMixin, ListView):
     template_name = "post_list.html"
 
 
+class SearchResultsView(ListView):
+    model = Post
+    template_name = "search_list.html"
+
+    def get_queryset(self):
+        query = self.request.GET.get("q")
+        object_list = Post.objects.filter(Q(title__icontains=query))
+
+        return object_list
+
+
 # class PostDetailView(LoginRequiredMixin, DetailView):
 #     model = Post
 #     template_name = "post_detail.html"
