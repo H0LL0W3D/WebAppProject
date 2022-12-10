@@ -10,7 +10,9 @@ class CustomUserCreationForm(UserCreationForm):
             "username",
             "email",
             "age",
-        )  # new
+            "first_name",
+            "last_name",
+        )
 
 
 class CustomUserChangeForm(UserChangeForm):
@@ -20,4 +22,6 @@ class CustomUserChangeForm(UserChangeForm):
             "username",
             "email",
             "age",
+            "first_name",
+            "last_name",
         )
