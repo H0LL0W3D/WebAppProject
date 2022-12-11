@@ -2,7 +2,8 @@ from django.conf import settings
 from django.db import models
 from django.urls import reverse
 from crispy_forms.helper import FormHelper
-from django_project.settings import CLOUDINARY_STORAGE
+
+# from django_project.settings import CLOUDINARY_STORAGE
 
 
 class Post(models.Model):
