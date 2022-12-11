@@ -3,7 +3,6 @@ attrs==22.1.0
 certifi==2022.9.24
 chardet==5.0.0
 charset-normalizer==2.1.1
-cloudinary
 crispy-bootstrap5==0.6
 decorator==4.4.2
 dj-database-url==1.0.0
