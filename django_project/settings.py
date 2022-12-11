@@ -14,6 +14,10 @@ from pathlib import Path
 import os
 from environs import Env
 
+# import cloudinary
+# import cloudinary.uploader
+# import cloudinary.api
+
 env = Env()
 env.read_env()
 
@@ -48,8 +52,8 @@ INSTALLED_APPS = [
     "accounts.apps.AccountsConfig",
     "pages.apps.PagesConfig",
     "posts.apps.PostsConfig",
-    "cloudinary_storage",
-    "cloudinary",
+    # "cloudinary_storage",
+    # "cloudinary",
 ]
 
 MIDDLEWARE = [

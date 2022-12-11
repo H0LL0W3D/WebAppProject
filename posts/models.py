@@ -2,6 +2,7 @@ from django.conf import settings
 from django.db import models
 from django.urls import reverse
 from crispy_forms.helper import FormHelper
+from django_project.settings import CLOUDINARY_STORAGE
 
 
 class Post(models.Model):
@@ -17,6 +18,7 @@ class Post(models.Model):
         upload_to="screenshots",
         default="https://poster.keepcalmandposters.com/default/5773497_keep_calm_there_is_nothing_here.png",
     )
+    # image = CLOUDINARY_STORAGE.models.CloudinaryField("image")
 
     # class Meta:
     #     ordering = ["date"].reverse
